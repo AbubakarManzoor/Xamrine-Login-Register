@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            mc:Ignorable="d"
+            BackgroundImageSource="login_background.png"
+            x:Class="LoginRegister.Views.LoginPage">
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" ></StackLayout>
+
+
+            <StackLayout Grid.Row="1">
+
+                <Grid Margin="20,0,20,0" VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Text="SEMICO" TextColor="White" FontSize="30" FontAttributes="Bold"/>
+                            <Label Grid.Column="1" Text="LEN" TextColor="#28d8a1" FontSize="30" FontAttributes="Bold"/>
+                        </Grid>
+                    </StackLayout>
+
+                    <Frame Padding="5,0,5,0" CornerRadius="5" Grid.Row="1" BackgroundColor="#212121" Margin="5,5,5,5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="entry_username.png"/>
+                            <Entry Grid.Column="1" Placeholder="UserName" FontSize="16" x:Name="EnteryUsername" TextColor="White" PlaceholderColor="White"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="5,0,5,0" CornerRadius="5" Grid.Row="2" BackgroundColor="#212121" Margin="5,5,5,5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="entry_password.png"/>
+                            <Entry Grid.Column="1" IsPassword="True" Placeholder="Password" FontSize="16" x:Name="EnteryPasword" TextColor="White" PlaceholderColor="White"/>
+                        </Grid>
+                    </Frame>
+                   
+                    
+                    <StackLayout Grid.Row="3" VerticalOptions="Center" HorizontalOptions="Start">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <CheckBox Grid.Column="0" Color="#28d8a1"/>
+                            <Label VerticalOptions="Center" Grid.Column="1" Text="Keep me logged in" TextColor="White"/>
+
+                        </Grid>
+                    </StackLayout>
+
+                    <Frame Padding="0" CornerRadius="5" Grid.Row="4" Margin="5,5,5,5">
+                        <Button Text="Login" FontAttributes="Bold" HorizontalOptions="FillAndExpand" WidthRequest="100" TextColor="White" BackgroundColor="#28d8a1" Clicked="LoginButtonClicked"/>
+                    </Frame>
+                    
+                    <StackLayout Grid.Row="5" HorizontalOptions="Center">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Text="Forget password?" TextColor="White"/>
+                            <Label Grid.Column="1" Text="Recover here" TextColor="#28d8a1" FontAttributes="Bold" x:Name="recoverhere"/>
+
+                        </Grid>
+
+                    </StackLayout>
+
+                </Grid>
+
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" Margin="0, 0,0,20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" Text="Don't have an account?" TextColor="White"/>
+                    <Label Grid.Column="1" Text="Signup here" TextColor="#28d8a1" FontAttributes="Bold" x:Name="signupLable"/>
+                </Grid>
+            </StackLayout>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

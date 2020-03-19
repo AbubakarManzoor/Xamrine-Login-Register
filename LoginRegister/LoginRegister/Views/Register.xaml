@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundImageSource="login_background.png"
+             x:Class="LoginRegister.Views.Register">
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="0" ></StackLayout>
+
+
+            <StackLayout Grid.Row="1">
+
+                <Grid Margin="20,0,20,0" VerticalOptions="CenterAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Text="SEMICO" TextColor="White" FontSize="30" FontAttributes="Bold"/>
+                            <Label Grid.Column="1" Text="LEN" TextColor="#28d8a1" FontSize="30" FontAttributes="Bold"/>
+                        </Grid>
+                    </StackLayout>
+
+                    <Frame Padding="5,0,5,0" CornerRadius="5" Grid.Row="1" BackgroundColor="#212121" Margin="5,5,5,5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="entry_username.png"/>
+                            <Entry Grid.Column="1" Placeholder="UserName" FontSize="16" x:Name="SignupEntryUsername" TextColor="White" PlaceholderColor="White"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="5,0,5,0" CornerRadius="5" Grid.Row="2" BackgroundColor="#212121" Margin="5,5,5,5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="entry_password.png"/>
+                            <Entry Grid.Column="1"  IsPassword="True" Placeholder="Password" FontSize="16" x:Name="SignupEntryPasword" TextColor="White" PlaceholderColor="White"/>
+                        </Grid>
+                    </Frame>
+                    
+                    <Frame Padding="5,0,5,0" CornerRadius="5" Grid.Row="3" BackgroundColor="#212121" Margin="5,5,5,5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="entry_email.png"/>
+                            <Entry Grid.Column="1"  IsPassword="False" Placeholder="Email" FontSize="16" x:Name="SignupEntryEmail" TextColor="White" PlaceholderColor="White"/>
+                        </Grid>
+                    </Frame>
+                    
+                    <Frame Padding="5,0,5,0" CornerRadius="5" Grid.Row="4" BackgroundColor="#212121" Margin="5,5,5,5">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="entry_phone.png"/>
+                            <Entry Grid.Column="1"  IsPassword="False" Placeholder="Phone Number" FontSize="16" x:Name="SignupEntryPhoneNumber" TextColor="White" PlaceholderColor="White"/>
+                        </Grid>
+                    </Frame>
+                
+
+                    <Frame Padding="0" CornerRadius="5" Grid.Row="5" Margin="5,5,5,5">
+                        <Button Text="Signup" FontAttributes="Bold" HorizontalOptions="FillAndExpand" WidthRequest="100" TextColor="White" BackgroundColor="#28d8a1" Clicked="SignupButtonClicked"/>
+                    </Frame>
+
+                </Grid>
+
+            </StackLayout>
+
+
+            <StackLayout Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" Margin="0, 0,0,20">
+               
+            </StackLayout>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>
